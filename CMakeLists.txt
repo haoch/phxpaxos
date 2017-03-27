@@ -3,6 +3,25 @@ project(phxpaxos)
 
 set(CMAKE_CXX_STANDARD 11)
 
+include_directories(
+        src
+        include
+        src/algorithm
+        src/utils
+        src/comm
+        src/config
+        src/logstorage
+        src/sm-base
+        src/checkpoint
+        src/communicate/tcp
+        src/communicate
+        src/master
+        plugin/include
+        third_party/leveldb/include
+        third_party/protobuf-3.0.0/gmock/include
+        third_party/protobuf/include
+)
+
 set(SOURCE_FILES
         include/phxpaxos/breakpoint.h
         include/phxpaxos/def.h
